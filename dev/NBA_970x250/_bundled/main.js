@@ -29,7 +29,7 @@ var read = {
 	frame3: 3
 };
 
-read.frame1["PP-Batflip"] = 1.2;
+read.frame1["NBA"] = 1.2;
 read.frame1["MARCH2"] = 2.8;
 
 var w = bannerSize.w;
