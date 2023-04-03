@@ -13,7 +13,7 @@ const read = {
 	frame3: 3
 }
 
-read.frame1[`NBA`] = 1.2
+read.frame1[`NBA`] = 1.8
 read.frame1[`MARCH2`] = 2.8
 
 const {w, h} = bannerSize
@@ -83,7 +83,9 @@ function standard(frame1=sliderSlant){
 
 	
 
-	tl.add(fader(".frame3", read.frame3), "+=.3")
+	tl.from(".frame3a", {duration:.2, opacity:0}, "+=.2")
+	tl.from(".frame3b", {duration:.2, opacity:0}, "+=1.9")
+	tl.to([".frame3a", '.frame3b'], {duration:.2, opacity:0}, "+=1.5")
 	
 
 
