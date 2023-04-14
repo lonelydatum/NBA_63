@@ -13,7 +13,7 @@ const read = {
 	frame3: 3
 }
 
-read.frame1[`NBA`] = 1.8
+read.frame1[`NBA`] = 1.2
 read.frame1[`MARCH2`] = 2.8
 
 const {w, h} = bannerSize
@@ -58,7 +58,7 @@ function sliderVertical(){
 function standard(frame1=sliderSlant){	
 	
 	const tl = init()	
-	// tl.from(".proline1", {duration:.2, opacity:0}, "+=.2")
+	tl.from(".proline1", {duration:.2, opacity:0}, "+=.2")
 	tl.to(".proline1", {duration:.2, opacity:0}, "+=.8")
 
 	
@@ -83,8 +83,7 @@ function standard(frame1=sliderSlant){
 
 	
 
-	tl.add(fader(".frame3a", 1.9), "+=.1")
-	tl.add(fader(".frame3b", 1.7), "+=.1")
+	tl.add(fader(".frame3", read.frame3), "+=.3")
 	
 
 
