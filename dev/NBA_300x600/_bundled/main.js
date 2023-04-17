@@ -29,7 +29,7 @@ var read = {
 	frame3: 3
 };
 
-read.frame1["NBA"] = 1.2;
+read.frame1["NBA"] = 1.8;
 read.frame1["MARCH2"] = 2.8;
 
 var w = bannerSize.w;
@@ -73,7 +73,7 @@ function standard() {
 	var frame1 = arguments.length <= 0 || arguments[0] === undefined ? sliderSlant : arguments[0];
 
 	var tl = init();
-	tl.from(".proline1", { duration: .2, opacity: 0 }, "+=.2");
+	// tl.from(".proline1", {duration:.2, opacity:0}, "+=.2")
 	tl.to(".proline1", { duration: .2, opacity: 0 }, "+=.8");
 
 	tl.add(frame1());
@@ -92,7 +92,8 @@ function standard() {
 				// tl.to(".frame2", {duration:.2, opacity:0}, `+=${read.frame2}`)
 			}
 
-	tl.add(fader(".frame3", read.frame3), "+=.3");
+	tl.add(fader(".frame3a", 1.9), "+=.1");
+	tl.add(fader(".frame3b", 1.7), "+=.1");
 
 	tl.from([".frame4", ".footer"], { duration: .2, opacity: 0 }, "+=.3");
 	tl.from(".cta", { duration: .2, opacity: 0 }, "+=.8");
